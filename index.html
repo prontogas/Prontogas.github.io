@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pronto Gás</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Pronto Gás está no ar!</h1>
-  <p>Seu site foi publicado com sucesso no GitHub Pages.</p>
+  <header>
+    <img src="logo.png" alt="Pronto Gás" class="logo">
+    <h1>Bem-vindo ao Pronto Gás</h1>
+  </header>
+  <main>
+    <p>Solicite seu gás ou água com rapidez!</p>
+    <button onclick="gerarCodigo()">Pedir Agora</button>
+    <div id="codigo"></div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
