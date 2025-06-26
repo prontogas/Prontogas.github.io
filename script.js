@@ -1,10 +1,15 @@
 function gerarCodigo() {
-  const tipoProduto = document.querySelector('input[name="produto"]:checked').value;
-  const codigo = "PG-" + Math.floor(1000 + Math.random() * 9000);
-  const mensagem = `Olá! Gostaria de fazer um pedido. Produto: ${tipoProduto}. Código: ${codigo}`;
+  const produtoSelecionado = document.querySelector('input[name="produto"]:checked').value;
+  const codigo = Math.floor(1000 + Math.random() * 9000);
+  const codigoPedido = `PG-${codigo}`;
+
+  document.getElementById("codigo").innerText = `Seu pedido foi gerado: ${codigoPedido}`;
+
+  const mensagem = `Olá! Gostaria de pedir ${produtoSelecionado}. Código do pedido: ${codigoPedido}`;
+  const telefone = "21975433826"; // Seu número com DDD
+  const link = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
 
   const whatsappLink = document.getElementById("whatsappLink");
-  whatsappLink.href = `https://wa.me/5521975433826?text=${encodeURIComponent(mensagem)}`;
-  whatsappLink.style.display = "inline-block";
-  whatsappLink.innerText = "Enviar pelo WhatsApp";
+  whatsappLink.href = link;
+  whatsappLink.style.display = "inline";
 }
