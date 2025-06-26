@@ -6,7 +6,7 @@ function gerarCodigo() {
   document.getElementById("codigo").innerText = `Seu pedido foi gerado: ${codigoPedido}`;
 
   const mensagem = `Olá! Gostaria de pedir ${produtoSelecionado}. Código do pedido: ${codigoPedido}`;
-  const telefone = "21975433826"; // Seu número com DDD
+  const telefone = "5521975433826";
   const link = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
 
   const whatsappLink = document.getElementById("whatsappLink");
