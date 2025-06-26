@@ -13,11 +13,19 @@
   </header>
 
   <main>
-    <p>Solicite seu gás ou água com rapidez!</p>
-    <a id="whatsappLink" href="#" target="_blank">
+  <p>Solicite seu gás ou água com rapidez!</p>
+
+  <label>
+    <input type="radio" name="produto" value="GÁS" checked> Gás
+  </label>
+  <label>
+    <input type="radio" name="produto" value="ÁGUA"> Água
+  </label>
+
+  <br><br>
   <button onclick="gerarCodigo()">Pedir Agora</button>
-    </a>
-    <div id="codigo"></div>
+  <div id="codigo"></div>
+  <a id="whatsappLink" href="#" target="_blank">Enviar pelo WhatsApp</a>
   </main>
 
   <script src="script.js"></script>
