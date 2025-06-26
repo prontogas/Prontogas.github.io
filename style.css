@@ -1,32 +1,38 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   background-color: #f4f4f4;
   color: #333;
-  text-align: center;
-  padding: 2rem;
 }
+
 header {
-  background-color: #2f2f2f;
-  color: white;
-  padding: 1rem;
-  border-radius: 10px;
+  background-color: #2c2c2c; /* cinza grafite */
+  color: #fff;
+  padding: 20px 10px;
 }
+
 .logo {
-  width: 100px;
-  margin-bottom: 1rem;
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
 }
+
+main {
+  padding: 30px 15px;
+}
+
 button {
-  background-color: #2f2f2f;
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #2c2c2c;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  margin-top: 2rem;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
 }
-#codigo {
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 1.3rem;
+
+button:hover {
+  background-color: #444;
 }
