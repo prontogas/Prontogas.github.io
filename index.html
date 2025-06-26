@@ -15,18 +15,25 @@
   <main>
   <p>Solicite seu gás ou água com rapidez!</p>
 
-  <label>
-    <input type="radio" name="produto" value="Gás" checked> Gás
-  </label>
-  <label>
-    <input type="radio" name="produto" value="Água"> Água
-  </label>
+  <input type="radio" id="gas"   name="produto" value="Gás"   checked>
+  <label for="gas">Gás</label>
+
+  <input type="radio" id="agua"  name="produto" value="Água">
+  <label for="agua">Água</label>
+
+  <br><br>
+
+  <label for="endereco">Endereço:</label>
+  <input type="text" id="endereco" name="endereco"
+         placeholder="Rua, nº, bairro" required>
 
   <br><br>
 
   <button onclick="gerarCodigo()">Pedir Agora</button>
 
   <div id="codigo"></div>
+
+  <br>
 
   <a id="whatsappLink" href="#" target="_blank">Enviar pelo WhatsApp</a>
 </main>
