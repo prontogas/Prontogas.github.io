@@ -1,18 +1,44 @@
-.logo {
-  width: 150px;
-  display: block;
-  margin: 40px auto 20px;
-}
-
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #ffffff;
+  margin: 0;
   padding: 20px;
 }
 
-button {
-  padding: 8px 12px;
-  font-size: 14px;
-  cursor: pointer;
+img.logo {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#codigo {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
