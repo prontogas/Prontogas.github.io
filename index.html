@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pronto Gás</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Pronto Gás" style="max-width: 200px; height: auto; display: block; margin: 0 auto;" />
+    <img src="logo.png" alt="Pronto Gás" class="logo">
     <h1>Bem-vindo ao Pronto Gás</h1>
   </header>
-
   <main>
-  <p>Solicite seu gás ou água com rapidez!</p>
-
-  <input type="radio" id="gas"   name="produto" value="Gás"   checked>
-  <label for="gas">Gás</label>
-
-  <input type="radio" id="agua"  name="produto" value="Água">
-  <label for="agua">Água</label>
-
-  <br><br>
-
-  <label for="endereco">Endereço:</label>
-  <input type="text" id="endereco" name="endereco"
-         placeholder="Rua, nº, bairro" required>
-
-  <br><br>
-
-  <button onclick="gerarCodigo()">Pedir Agora</button>
-
-  <div id="codigo"></div>
-
-  <br>
-
-  <a id="whatsappLink" href="#" target="_blank">Enviar pelo WhatsApp</a>
-</main>
-
+    <p>Solicite seu gás ou água com rapidez!</p>
+    <form id="pedidoForm">
+      <input type="text" id="nome" placeholder="Seu nome" required><br>
+      <input type="text" id="endereco" placeholder="Endereço" required><br>
+      <input type="text" id="referencia" placeholder="Ponto de referência"><br>
+      <select id="pagamento" required>
+        <option value="" disabled selected>Forma de pagamento</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Pix">Pix</option>
+        <option value="Cartão">Cartão</option>
+        <option value="Fiado">Fiado</option>
+      </select><br><br>
+      <button type="button" onclick="gerarCodigo()">Pedir Agora</button>
+    </form>
+    <div id="codigo"></div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
