@@ -1,4 +1,15 @@
-function gerarCodigo() {
+function // Obtém a localização ao carregar a página
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+    document.getElementById("localizacao").value = `https://www.google.com/maps?q=${lat},${lon}`;
+  },
+  (error) => {
+    console.warn("Localização não autorizada ou indisponível.");
+    document.getElementById("localizacao").value = "Localização não informada";
+  }
+); gerarCodigo() {
   const nome = document.getElementById("nome").value;
   const endereco = document.getElementById("endereco").value;
   const referencia = document.getElementById("referencia").value;
