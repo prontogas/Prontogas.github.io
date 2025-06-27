@@ -7,7 +7,40 @@
   <title>Pronto Gás</title>
   <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- </head>
+<form id="pedidoForm">
+
+  <!-- Campo nome -->
+  <div class="input-group">
+    <i class="fa fa-user"></i>
+    <input type="text" id="nome" placeholder="Seu nome" required>
+  </div>
+
+  <!-- Campo endereço -->
+  <div class="input-group">
+    <i class="fa fa-map-marker-alt"></i>
+    <input type="text" id="endereco" placeholder="Endereço" required>
+  </div>
+
+  <!-- Campo ponto de referência -->
+  <div class="input-group">
+    <i class="fa fa-location-dot"></i>
+    <input type="text" id="referencia" placeholder="Ponto de referência">
+  </div>
+
+  <!-- Campo forma de pagamento -->
+  <div class="input-group">
+    <i class="fa fa-credit-card"></i>
+    <select id="pagamento" required>
+      <option value="" disabled selected>Forma de pagamento</option>
+      <option value="Dinheiro">Dinheiro</option>
+      <option value="Pix">Pix</option>
+      <option value="Cartão">Cartão</option>
+      <option value="Fiado">Fiado</option>
+    </select>
+  </div>
+
+  <button type="button" onclick="gerarCodigo()">Pedir Agora</button>
+</form> </head>
 <body>
   <header>
     <img src="logo.png" alt="Pronto Gás" class="logo">
