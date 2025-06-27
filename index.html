@@ -9,52 +9,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <main>
-    <img src="logo.png" alt="Pronto Gás" class="logo">
-    <h1>Bem-vindo ao Pronto Gás</h1>
-    <p>Solicite seu gás ou água com rapidez!</p>
+    <div class="card">
+      <img src="logo.png" alt="Pronto Gás" class="logo">
+      <h1>Bem-vindo ao Pronto Gás</h1>
+      <p>Solicite seu gás ou água com rapidez!</p>
 
-    <form id="pedidoForm">
-      <!-- Campo nome -->
-      <div class="input-group">
-        <i class="fa fa-user"></i>
-        <input type="text" id="nome" placeholder="Seu nome" required>
-      </div>
+      <form id="pedidoForm">
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-map-marker-alt"></i>
+          <input type="text" id="endereco" placeholder="Endereço" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-location-dot"></i>
+          <input type="text" id="referencia" placeholder="Ponto de referência">
+        </div>
+        <div class="input-group">
+          <i class="fa fa-credit-card"></i>
+          <select id="pagamento" required>
+            <option value="" disabled selected>Forma de pagamento</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Pix">Pix</option>
+            <option value="Cartão">Cartão</option>
+            <option value="Fiado">Fiado</option>
+          </select>
+        </div>
 
-      <!-- Campo endereço -->
-      <div class="input-group">
-        <i class="fa fa-map-marker-alt"></i>
-        <input type="text" id="endereco" placeholder="Endereço" required>
-      </div>
+        <!-- Campo oculto com a localização -->
+        <input type="hidden" id="localizacao">
 
-      <!-- Campo ponto de referência -->
-      <div class="input-group">
-        <i class="fa fa-location-dot"></i>
-        <input type="text" id="referencia" placeholder="Ponto de referência">
-      </div>
-
-      <!-- Campo forma de pagamento -->
-      <div class="input-group">
-        <i class="fa fa-credit-card"></i>
-        <select id="pagamento" required>
-          <option value="" disabled selected>Forma de pagamento</option>
-          <option value="Dinheiro">Dinheiro</option>
-          <option value="Pix">Pix</option>
-          <option value="Cartão">Cartão</option>
-          <option value="Fiado">Fiado</option>
-        </select>
-      </div>
-
-      <button type="button" onclick="gerarCodigo()">
-  <i class="fa fa-paper-plane"></i> Pedir Agora
-      </button>
-    </form>
-
-    <div id="codigo"></div>
+        <button type="button" onclick="gerarCodigo()">
+          <i class="fa fa-paper-plane"></i> Pedir Agora
+        </button>
+      </form>
+    </div>
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
-<input type="hidden" id="localizacao">
